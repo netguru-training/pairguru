@@ -1,0 +1,15 @@
+.row
+  .col-md-8.col-md-offset-2.col-lg-8.col-lg-offset-2
+    %h1.text-center All genres
+    %table.table.table-striped
+      %thead
+        %tr
+          %th Name
+          %th Number of movies
+          %th Created at
+      %tbody
+        - genres.each do |genre|
+          %tr
+            %td= genre.name
+            %td= genre.number_of_movies
+            %td= genre.created_at
