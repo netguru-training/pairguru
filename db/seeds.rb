@@ -1,5 +1,18 @@
 require 'faker'
 
+puts 'Creating users...'
+User.create!(
+  email: 'user@example.com',
+  password: 'userexample11'
+) unless User.find_by(email: 'user@example.com')
+
+20.times do
+  User.create!(
+    email: Faker::Internet.email,
+    password: 'commonpass11'
+  )
+end
+
 puts 'Creating genres...'
 %w(Action Comedy Sci-Fi War Crime
    Horror Sport Western Drama
