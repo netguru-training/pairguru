@@ -4,12 +4,14 @@
     %table.table.table-striped
       %thead
         %tr
+          %th #
           %th Name
           %th Number of movies
           %th Created at
       %tbody
-        - genres.each do |genre|
+        - genres.each_with_index do |genre, i|
           %tr
+            %td= i + 1
             %td= genre.name
             %td= genre.number_of_movies
             %td= genre.created_at
