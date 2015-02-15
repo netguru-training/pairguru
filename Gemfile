@@ -7,6 +7,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'
 gem 'devise'
 gem 'haml-rails', '~> 0.8'
+gem 'decent_decoration'
 gem 'netguru_theme'
 
 group :development do
