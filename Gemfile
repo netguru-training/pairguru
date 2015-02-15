@@ -17,5 +17,5 @@ group :development do
 end
 
 group :development, :test do
-  gem 'ffaker'
+  gem 'faker', '~> 1.4.3'
 end
