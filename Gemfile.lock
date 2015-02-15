@@ -45,6 +45,8 @@ GEM
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
       rack (>= 0.9.0)
+    binding_of_caller (0.7.2)
+      debug_inspector (>= 0.0.1)
     bootstrap-sass (3.3.3)
       autoprefixer-rails (>= 5.0.0.1)
       sass (>= 3.2.19)
@@ -57,6 +59,7 @@ GEM
       uniform_notifier (>= 1.6.0)
     choice (0.1.6)
     coderay (1.1.0)
+    debug_inspector (0.0.2)
     decent_decoration (0.0.6)
       decent_exposure (>= 2.0)
     decent_exposure (2.3.2)
@@ -195,6 +198,7 @@ PLATFORMS
 
 DEPENDENCIES
   better_errors
+  binding_of_caller
   bullet
   decent_decoration
   decent_exposure
