@@ -15,3 +15,7 @@ group :development do
   gem 'bullet'
   gem 'pry-rails'
 end
+
+group :development, :test do
+  gem 'ffaker'
+end
