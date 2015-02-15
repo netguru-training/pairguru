@@ -1,10 +1,21 @@
 !!!
 %html
   %head
-    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %title Pairguru
-    = stylesheet_link_tag    'application', media: 'all'
+    %meta{ name: "viewport", content: "width=device-width, initial-scale=1.0" }
+    %title= content_for?(:title) ? yield(:title) : 'Pairguru'
+    %meta{ name: "description", content: "#{content_for?(:description) ? yield(:description) : 'Props'}" }
+    = stylesheet_link_tag 'application', media: 'all'
     = javascript_include_tag 'application'
     = csrf_meta_tags
   %body
-    = yield
+    #announcements-region
+    %header
+      #header-region
+        = render 'layouts/navigation'
+    %main
+      .container
+        #main-region
+        = yield
+    %footer.text-center
+      Magic by
+      = link_to 'netguru', 'https://netguru.co'
