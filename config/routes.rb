@@ -3,4 +3,5 @@ Rails.application.routes.draw do
 
   root 'home#welcome'
   resources :genres, only: :index
+  resources :movies, only: [:index, :show]
 end
