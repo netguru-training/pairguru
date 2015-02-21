@@ -28,7 +28,6 @@ genre_ids = Genre.pluck(:id)
   Movie.find_or_create_by!(
     title: Faker::Lorem.words(title_how_many_words).join(' ').capitalize,
     description: Faker::Lorem.paragraph(5),
-    avatar: Faker::Avatar.image,
     genre_id: genre_ids.sample,
     released_at: Faker::Date.between(40.years.ago, Date.today)
   )
