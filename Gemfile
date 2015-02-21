@@ -11,6 +11,7 @@ gem 'draper', '~> 1.3.1'
 gem 'decent_decoration'
 gem 'decent_exposure'
 gem 'netguru_theme'
+gem 'annotate', '~> 2.6.5'
 
 group :development do
   gem 'rails-erd'
