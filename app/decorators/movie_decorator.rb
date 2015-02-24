@@ -5,3 +5,4 @@ class MovieDecorator < Draper::Decorator
     'http://lorempixel.com/100/150/' + %W(abstract nightlife transport).sample + '?a=' + SecureRandom.uuid
   end
 end
+ 
