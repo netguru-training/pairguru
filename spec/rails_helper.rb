@@ -6,6 +6,7 @@ require 'rspec/rails'
 require 'pry'
 require 'capybara/rails'
 require 'simplecov'
+require 'shoulda/matchers'
 SimpleCov.start 'rails'
 # Add additional requires below this line. Rails is not loaded until this point!
 
