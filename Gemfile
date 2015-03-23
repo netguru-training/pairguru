@@ -19,6 +19,8 @@ group :development do
   gem 'bullet'
   gem 'pry-rails'
   gem 'binding_of_caller'
+  gem 'spring'
+  gem 'spring-commands-rspec'
 end
 
 group :development, :test do
