@@ -1,3 +1,3 @@
 class MoviesController < ApplicationController
-  expose_decorated(:movies)
+  expose_decorated(:movies) { Movie.all }
 end
