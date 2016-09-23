@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '4.2'
+gem 'rails', '4.2.7.1'
 gem 'sqlite3'
 gem 'sass-rails', '~> 4.0.3'
 gem 'uglifier', '>= 1.3.0'
@@ -24,7 +24,7 @@ group :development do
 end
 
 group :development, :test do
-  gem 'rspec-rails', '~> 3.0'
+  gem 'rspec-rails'
   gem 'capybara'
   gem 'faker', '~> 1.4.3'
   gem "factory_girl_rails", "~> 4.0"
