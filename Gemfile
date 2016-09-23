@@ -10,7 +10,7 @@ gem 'haml-rails', '~> 0.8'
 gem 'draper', '~> 1.3.1'
 gem 'decent_decoration'
 gem 'decent_exposure'
-gem 'netguru_theme'
+gem 'bootstrap-sass'
 gem 'annotate', '~> 2.6.5'
 
 group :development do
