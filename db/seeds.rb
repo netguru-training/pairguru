@@ -23,14 +23,57 @@ puts 'Creating genres...'
   Genre.find_or_create_by!(name: genre)
 end
 
+movies = [
+  {
+    title: 'Pulp Fiction',
+    release_year: '1994'
+  },
+  {
+    title: 'Django',
+    release_year: '2012'
+  },
+  {
+    title: 'Kill Bill',
+    release_year: '2003'
+  },
+  {
+    title: 'Kill Bill 2',
+    release_year: '2004'
+  },
+  {
+    title: 'Inglorious Basterds',
+    release_year: '2009'
+  },
+  {
+    title: 'Godfather',
+    release_year: '1972'
+  },
+  {
+    title: 'The Dark Knight',
+    release_year: '2008'
+  },
+  {
+    title: 'Star Wars V',
+    release_year: '1980'
+  },
+  {
+    title: 'Inception',
+    release_year: '2010'
+  },
+  {
+    title: 'Deadpool',
+    release_year: '2016'
+  }
+]
+
 puts 'Creating movies...'
 genre_ids = Genre.pluck(:id)
 100.times do
-  title_how_many_words = [1, 2, 3].sample
+  movie = movies.sample
   Movie.find_or_create_by!(
-    title: Faker::Lorem.words(title_how_many_words).join(' ').capitalize,
+    title: movie[:title],
     description: Faker::Lorem.paragraph(5),
     genre_id: genre_ids.sample,
-    released_at: Faker::Date.between(40.years.ago, Date.today)
+    released_at: Date.new(movie[:release_year].to_i)
   )
 end
