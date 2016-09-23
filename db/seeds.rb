@@ -3,12 +3,14 @@ require 'faker'
 puts 'Creating users...'
 User.create!(
   email: 'user@example.com',
-  password: 'userexample11'
+  password: 'userexample11',
+  confirmed_at: Time.now,
 ) unless User.find_by(email: 'user@example.com')
 
 20.times do
   User.create!(
     email: Faker::Internet.email,
+    confirmed_at: Time.now,
     password: 'commonpass11'
   )
 end
