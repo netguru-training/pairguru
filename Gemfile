@@ -21,6 +21,7 @@ group :development do
   gem 'binding_of_caller'
   gem 'spring'
   gem 'spring-commands-rspec'
+  gem 'letter_opener'
 end
 
 group :development, :test do
