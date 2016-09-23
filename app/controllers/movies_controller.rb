@@ -8,4 +8,10 @@ class MoviesController < ApplicationController
     MovieInfoMailer.send_info(current_user, movie).deliver_now
     redirect_to :back
   end
+
+  def export
+    file_path = 'tmp/movies.csv'
+    MovieExporter.new.call(current_user, file_path)
+    redirect_to root_path, notice: 'Movies exported'
+  end
 end

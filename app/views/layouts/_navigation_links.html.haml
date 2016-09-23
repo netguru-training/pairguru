@@ -1,2 +1,4 @@
 %li= link_to 'Movies', movies_path
 %li= link_to 'Genres', genres_path
+- if user_signed_in?
+  %li= link_to 'Export', export_movies_path
