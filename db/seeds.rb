@@ -41,7 +41,7 @@ movies = [
     release_year: '2004'
   },
   {
-    title: 'Inglourious Basterds',
+    title: 'Inglourious Bastards',
     release_year: '2009'
   },
   {
