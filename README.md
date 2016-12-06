@@ -19,4 +19,4 @@ Before pairing:
  After a while developers started asking us about adding genre to our results. They want genre id, name and number of movies in this genre. We don't want to break api for existing users or make them to fetch more data.
 
  ### Task 3 - long running tasks
- We have two tasks that run too long and users leave our page frustrated: emailing details about movie (button in movie show) and emailing movies csv export (in navigation). We should make it that user doesn't have to wait for page load and still get emails.
+ We have two tasks that run too long and users leave our page frustrated: emailing details about movie (button in movie show) and emailing movies csv export (in navigation). We should make it that user doesn't have to wait for page load and still get emails. We would like to have overview of sent mails accessed only by admin user.
