@@ -16,7 +16,7 @@ Before pairing:
  ### Task 2 - build api
  We would like to share our movies via api. We want to return list of all out movies (id and title). Besides that we would like to for user to get specific movie by id.
 
- After a while developers started asking us about adding genre to our results. They want genre id, name and number of movies in this genre. We don't want to break api for existing users or make them to fetch more data.
+ After a while developers started asking us to extend our results by adding genre details. They want genre id, name and number of movies in this genre to be returned along with the movies. We don't want to break api for existing users or make them to fetch more data.
 
  ### Task 3 - long running tasks
- We have two tasks that run too long and users leave our page frustrated: emailing details about movie (button in movie show) and emailing movies csv export (in navigation). We should make it that user doesn't have to wait for page load and still get emails. We would like to have overview of sent mails accessed only by admin user.
+ We have two tasks that run too long and users leave our page frustrated: emailing details about movie (button in movie show) and emailing movies csv export (in navigation). We should make it that user doesn't have to wait for page load and still get emails.
