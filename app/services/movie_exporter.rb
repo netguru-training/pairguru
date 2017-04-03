@@ -1,8 +1,8 @@
-require 'csv'
+require "csv"
 
 class MovieExporter
   def call(user, file_path)
-    CSV.open(file_path, 'wb', csv_options) do |csv|
+    CSV.open(file_path, "wb", csv_options) do |csv|
       Movie.all.each do |movie|
         csv << [movie.title, movie.description]
       end
@@ -17,7 +17,7 @@ class MovieExporter
     {
       write_headers: true,
       headers: %w(title description),
-      col_sep: ';'
+      col_sep: ";",
     }
   end
 end

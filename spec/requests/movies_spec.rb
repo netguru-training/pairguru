@@ -1,12 +1,10 @@
-require 'rails_helper'
+require "rails_helper"
 
-describe 'Movies requests', type: :request do
-
-  describe 'movies list' do
-    it 'displays right title' do
-      visit '/movies'
-      expect(page).to have_selector('h1', exact: 'Movies')
+describe "Movies requests", type: :request do
+  describe "movies list" do
+    it "displays right title" do
+      visit "/movies"
+      expect(page).to have_selector("h1", exact: "Movies")
     end
   end
-
 end
