@@ -11,7 +11,7 @@ Before pairing:
 
  ## Pre-interview tasks (optional)
  ### Task 1 - consume api
- We would like to have more information about the movie in movie show page. The information should come from pairguru api - https://pairguru-api.herokuapp.com/api/v1/:title. We should display movie poster (e.g. https://pairguru-api.herokuapp.com/godfather.jpg), rating and plot overview. We can't store this data in database.
+ We would like to have more information about the movie in movie show page. The information should come from pairguru api (e.g. https://pairguru-api.herokuapp.com/api/v1/movies/Godfather). We should display movie poster (e.g. https://pairguru-api.herokuapp.com/godfather.jpg), rating and plot overview. We can't store this data in database.
 
  ### Task 2 - build api
  We would like to share our movies via api. We want to return list of all out movies (id and title). Besides that we would like to for user to get specific movie by id.
