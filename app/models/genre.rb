@@ -8,6 +8,6 @@
 #  updated_at :datetime
 #
 
-class Genre < ActiveRecord::Base
+class Genre < ApplicationRecord
   has_many :movies
 end

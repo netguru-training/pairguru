@@ -12,6 +12,6 @@
 #  updated_at  :datetime
 #
 
-class Movie < ActiveRecord::Base
+class Movie < ApplicationRecord
   belongs_to :genre
 end
