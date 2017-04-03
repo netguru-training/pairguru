@@ -1,17 +1,17 @@
 source 'https://rubygems.org'
 
-gem 'rails', '4.2.7.1'
+gem 'rails', '5.0.2'
 gem 'sqlite3'
-gem 'sass-rails', '~> 4.0.3'
-gem 'uglifier', '>= 1.3.0'
+gem 'sass-rails'
+gem 'uglifier'
 gem 'jquery-rails'
 gem 'devise'
-gem 'haml-rails', '~> 0.8'
-gem 'draper'
+gem 'haml-rails'
+gem 'draper', '3.0.0.pre1' # rails 5 compability
 gem 'decent_decoration'
 gem 'decent_exposure'
 gem 'bootstrap-sass'
-gem 'annotate', '~> 2.6.5'
+gem 'annotate'
 
 group :development do
   gem 'rails-erd'
@@ -27,8 +27,8 @@ end
 group :development, :test do
   gem 'rspec-rails'
   gem 'capybara'
-  gem 'faker', '~> 1.4.3'
-  gem 'factory_girl_rails', '~> 4.0'
+  gem 'faker'
+  gem 'factory_girl_rails'
   gem 'simplecov'
 end
 
