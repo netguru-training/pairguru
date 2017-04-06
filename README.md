@@ -10,6 +10,9 @@ Before pairing:
  - run `rails s` :boom:
 
  ## Pre-interview tasks (optional)
+
+ Do not forget to write tests for your solutions
+
  ### Task 1 - consume api
  We would like to have more information about the movie in movie show page. The information should come from pairguru api (e.g. https://pairguru-api.herokuapp.com/api/v1/movies/Godfather). We should display movie poster (e.g. https://pairguru-api.herokuapp.com/godfather.jpg), rating and plot overview. We can't store this data in database.
 
@@ -20,3 +23,26 @@ Before pairing:
 
  ### Task 3 - long running tasks
  We have two tasks that run too long and users leave our page frustrated: emailing details about movie (button in movie show) and emailing movies csv export (in navigation). We should make it that user doesn't have to wait for page load and still get emails.
+
+ ### Task 4 - brackets validation
+ Our moderators are adding parentheses and brackets to the titles.
+
+ For example `The Fellowship of the Ring [Lord of The Rings {Peter Jackson}] (2012)`.
+
+ This is ok, but we need to make sure that all brackets are closed and not empty. They can be nested as in the example above.
+
+ Uncomment tests in `spec/validators/title_brackets_validator_spec.rb` and add validations for movie title that match all the criteria.
+
+ ### Task 5 - comments
+ Our users want to comment on movies. Let's add feature that allows them to do that.
+
+ We should have new comment form under the movie description and all the comments listed below that.
+
+ Additionally - one user should be allowed to leave only one comment to the movie. He can create another only if he deletes previous one.
+
+ ### Task 6 - sql query
+ We want to reward our users for commenting movies. The idea is to create page with top commenters this week.
+
+ It should have 10 users that have the most comments in last week (from 7 days ago to now).
+
+ This page will be very popular. We don't want to spam database with many queries in one pageview.
