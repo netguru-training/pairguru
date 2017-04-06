@@ -17,7 +17,7 @@ class MovieExporter
     {
       write_headers: true,
       headers: %w(title description),
-      col_sep: ";",
+      col_sep: ";"
     }
   end
 end
