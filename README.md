@@ -40,7 +40,7 @@ Before pairing:
 
  Additionally - one user should be allowed to leave only one comment to the movie. He can create another only if he deletes previous one.
 
- ### Task 6 - sql query
+ ### Task 6 - sql query (dependent on 5)
  We want to reward our users for commenting movies. The idea is to create page with top commenters this week.
 
  It should have 10 users that have the most comments in last week (from 7 days ago to now).
