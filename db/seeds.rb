@@ -4,19 +4,14 @@ Rails.logger = Logger.new(STDOUT)
 
 Rails.logger.info "Creating users..."
 
-unless User.find_by(email: "user@example.com")
+20.times do |i|
+  number = i.zero? ? "" : i + 1
+  email = "user#{number}@example.com"
+  next if User.exists?(email: email)
   User.create!(
-    email: "user@example.com",
-    password: "userexample11",
-    confirmed_at: Time.zone.now
-  )
-end
-
-20.times do
-  User.create!(
-    email: Faker::Internet.email,
+    email: email,
     confirmed_at: Time.zone.now,
-    password: "commonpass11"
+    password: "password"
   )
 end
 
