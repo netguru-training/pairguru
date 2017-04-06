@@ -6,10 +6,12 @@ Rails.logger.info "Creating users..."
 
 20.times do |i|
   number = i.zero? ? "" : i + 1
-  email = "user#{number}@example.com"
+  name = "user#{number}"
+  email = "#{name}@example.com"
   next if User.exists?(email: email)
   User.create!(
     email: email,
+    name: name,
     confirmed_at: Time.zone.now,
     password: "password"
   )
