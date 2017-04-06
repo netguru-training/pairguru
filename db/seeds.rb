@@ -69,12 +69,14 @@ movies = [
 Rails.logger.info "Creating movies..."
 
 genre_ids = Genre.pluck(:id)
-100.times do
-  movie = movies.sample
-  Movie.find_or_create_by!(
-    title: movie[:title],
-    description: Faker::Lorem.paragraph(5),
-    genre_id: genre_ids.sample,
-    released_at: Date.new(movie[:release_year].to_i)
-  )
+if Movie.count < 100
+  100.times do
+    movie = movies.sample
+    Movie.create!(
+      title: movie[:title],
+      description: Faker::Lorem.paragraph(5),
+      genre_id: genre_ids.sample,
+      released_at: Date.new(movie[:release_year].to_i)
+    )
+  end
 end
