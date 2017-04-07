@@ -11,6 +11,7 @@ Before pairing:
 
  ## Pre-interview tasks (optional)
 
+ Do not fork the repository - clone it
  Do not forget to write tests for your solutions
 
  ### Task 1 - consume api
