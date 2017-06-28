@@ -1,13 +1,13 @@
 source "https://rubygems.org"
 
-gem "rails", "5.0.2"
+gem "rails", "5.1.1"
 
 gem "annotate"
 gem "bootstrap-sass"
 gem "decent_decoration"
 gem "decent_exposure"
 gem "devise"
-gem "draper", "3.0.0.pre1" # rails 5 compability
+gem "draper", "3.0.0" # rails 5 compability
 gem "haml-rails"
 gem "jquery-rails"
 gem "sass-rails"
