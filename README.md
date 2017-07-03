@@ -49,3 +49,5 @@ Before pairing:
  It should have 10 users that have the most comments in last week (from 7 days ago to now).
 
  This page will be very popular. We don't want to spam database with many queries in one pageview.
+
+ Hint: It can be solved by using ActiveRecord.
