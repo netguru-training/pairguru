@@ -34,6 +34,8 @@ Before pairing:
 
  Uncomment tests in `spec/validators/title_brackets_validator_spec.rb` and add validations for movie title that match all the criteria.
 
+ Hint: It can't be solved via regular expressions.
+
  ### Task 5 - comments
  Our users want to comment on movies. Let's add feature that allows them to do that.
 
