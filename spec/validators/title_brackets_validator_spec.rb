@@ -50,6 +50,11 @@
 #     it_behaves_like "has invalid title"
 #   end
 
+#   context "with brackets in wrong order" do
+#     let(:title) { "The Fellowship of the )Ring(" }
+#     it_behaves_like "has invalid title"
+#   end
+
 #   context "with matching brackets" do
 #     let(:title) { "The Fellowship of the Ring (2001)" }
 #     it_behaves_like "has valid title"
