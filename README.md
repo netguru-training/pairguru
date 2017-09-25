@@ -13,6 +13,8 @@ Before pairing:
 
  Do not fork the repository - clone it
  Do not forget to write tests for your solutions
+ Do not remove contents of this README
+ Put solutions for tasks in separate commits
 
  ### Task 1 - consume api
  We would like to have more information about the movie in movie show and index page. The information should come from pairguru api (e.g. https://pairguru-api.herokuapp.com/api/v1/movies/Godfather). We should display movie poster (e.g. https://pairguru-api.herokuapp.com/godfather.jpg), rating and plot overview. We can't store this data in database.
