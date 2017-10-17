@@ -77,10 +77,6 @@ GEM
     coderay (1.1.1)
     concurrent-ruby (1.0.5)
     debug_inspector (0.0.3)
-    decent_decoration (0.1.0)
-      decent_exposure (~> 3.0)
-    decent_exposure (3.0.2)
-      activesupport (>= 4.0)
     devise (4.3.0)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -278,8 +274,6 @@ DEPENDENCIES
   bootstrap-sass
   bullet
   capybara
-  decent_decoration
-  decent_exposure
   devise
   draper (= 3.0.0)
   factory_girl_rails
@@ -301,4 +295,4 @@ DEPENDENCIES
   uglifier
 
 BUNDLED WITH
-   1.15.1
+   1.15.3
