@@ -1,4 +1,9 @@
 class GenresController < ApplicationController
-  expose_decorated(:genres) { Genre.all }
-  expose_decorated(:genre)
+  def index
+    @genres = Genre.all.decorate
+  end
+
+  def movies
+    @genre = Genre.find(params[:id]).decorate
+  end
 end

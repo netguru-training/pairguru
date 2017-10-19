@@ -10,6 +10,6 @@
             = link_to movie.title, movie_path(movie)
           %p
             %strong
-              =link_to movie.genre.name, movies_genre_path(movie.genre)
+              = link_to movie.genre.name, movies_genre_path(movie.genre)
             = ' (' + movie.released_at.to_s + ')'
           %p= movie.description

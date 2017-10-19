@@ -9,7 +9,7 @@
           %th Number of movies
           %th Created at
       %tbody
-        - genres.each_with_index do |genre, i|
+        - @genres.each_with_index do |genre, i|
           %tr
             %td= i + 1
             %td= genre.name
