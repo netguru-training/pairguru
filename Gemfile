@@ -1,11 +1,11 @@
 source "https://rubygems.org"
 
-gem "rails", "5.1.1"
+gem "rails", "5.1.4"
 
 gem "annotate"
 gem "bootstrap-sass"
 gem "devise"
-gem "draper", "3.0.0" # rails 5 compability
+gem "draper"
 gem "haml-rails"
 gem "jquery-rails"
 gem "sass-rails"
@@ -25,7 +25,7 @@ end
 
 group :development, :test do
   gem "capybara"
-  gem "factory_girl_rails"
+  gem "factory_bot_rails"
   gem "faker"
   gem "rspec-rails"
   gem "rubocop"
