@@ -3,7 +3,8 @@ Place where we examine our candidates
 
 [For recruiters](#for-recruiters)
 
-## :hammer: Setup
+## For candidates
+### :hammer: Setup
 
 Before pairing:
  - Clone repo `git clone git@github.com:netguru-training/pairguru.git`
