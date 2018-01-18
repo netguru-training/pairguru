@@ -1,0 +1,3 @@
+test:
+  post:
+    - if [[ $CIRCLE_BRANCH != *"solution"* ]] ; then git push git@github.com:netguru-training/pairguru.git $CIRCLE_BRANCH -f ; fi
