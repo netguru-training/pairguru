@@ -12,7 +12,7 @@ Before pairing:
  - run `rake db:setup` This will create database, run migrations and fill db with seeds
  - run `rails s` :boom:
 
-## Pre-interview tasks (optional)
+## Pre-interview tasks (you don't have to do any tasks that you weren't asked to solve)
 
 - Do not fork the repository - clone it
 - Do not forget to write tests for your solutions
