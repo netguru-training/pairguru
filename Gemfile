@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-gem "rails", "5.1.4"
+gem "rails", "5.2"
 
 gem "annotate"
 gem "bootstrap-sass"
@@ -11,6 +11,9 @@ gem "jquery-rails"
 gem "sass-rails"
 gem "sqlite3"
 gem "uglifier"
+
+# Reduces boot times through caching; required in config/boot.rb
+gem "bootsnap", ">= 1.1.0", require: false
 
 group :development do
   gem "better_errors"
@@ -27,6 +30,7 @@ group :development, :test do
   gem "capybara"
   gem "factory_bot_rails"
   gem "faker"
+  gem "listen"
   gem "rspec-rails"
   gem "rubocop"
   gem "simplecov"
