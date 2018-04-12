@@ -6,11 +6,7 @@ AllCops:
   Exclude:
   - "vendor/**/*"
   - "db/**/*"
-  - "**/Guardfile"
   - "config/environments/**/*"
-  - "config/deploy/**/*"
-  - "deployment/**/*"
-  - "config/initializers/**/*"
   DisplayCopNames: false
   StyleGuideCopsOnly: false
 Rails:
