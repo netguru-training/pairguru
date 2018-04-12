@@ -76,5 +76,6 @@ There is private [pairguru](https://github.com/netguru/pairguru) repository. In 
   * Create new branch with this setup - it will be propagated to public repo
   * Push branch to [pairguru](https://github.com/netguru/pairguru). It will be propagated to public repo
   * Specify in this task description that it should be solved on this branch
+* If you change something in the repo please try to update ruby/rails/gems versions to the latest.
 
 
