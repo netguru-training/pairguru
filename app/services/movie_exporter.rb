@@ -16,7 +16,7 @@ class MovieExporter
   def csv_options
     {
       write_headers: true,
-      headers: %w(title description),
+      headers: %w[title description],
       col_sep: ";"
     }
   end
