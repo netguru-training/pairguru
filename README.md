@@ -1,3 +1,5 @@
+# Please do NOT open any pull requests to this repository!
+
 ## Welcome to Pairguru App!
 Place where we examine our candidates
 
