@@ -13,3 +13,11 @@
               = link_to movie.genre.name, movies_genre_path(movie.genre)
             = ' (' + movie.released_at.to_s + ')'
           %p= movie.description
+        
+          %img{ src: movie.poster }
+
+          %h4 Plot
+          %p= movie.plot
+
+          %h4 Rating
+          %p= movie.rating
