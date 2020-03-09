@@ -1,0 +1,59 @@
+.new-comment-container {
+  padding: 30px 60px 0px 60px;
+  border-radius: 6px;
+  background-color: #eeeeee;
+}
+
+.comments-container {
+  padding: 0px 60px 30px 60px;
+  border-radius: 6px;
+  background-color: #eeeeee;
+}
+
+.comment-container {
+  .user-name {
+    text-align: center;
+    font-style: italic;
+    font-size: 16px;
+    color: #a103fc;
+    padding-top: 30px;
+  }
+
+  .description {
+    text-align: center;
+  }
+
+  .new-description {
+    text-align: center;
+    width: 100%;
+    min-height: 100px;
+    padding-top: 30px;
+  }
+
+  .buttons-container {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+  }
+
+  .button-left {
+    margin-left: auto;
+    color: white;
+    border-color: gray;
+    background-color: #a103fc;
+  }
+
+  .button-center {
+    margin: auto;
+    color: white;
+    border-color: gray;
+    background-color: #a103fc;
+  }
+
+  .button-right {
+    margin-right: auto;
+    color: white;
+    border-color: gray;
+    background-color: #a103fc;
+  }
+}

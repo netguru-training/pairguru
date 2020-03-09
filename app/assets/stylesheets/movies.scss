@@ -1,0 +1,24 @@
+.img-plp {
+  width: 100px;
+  height: auto;
+}
+
+.pdp {
+  display: flex;
+  margin-bottom: 20px;
+
+  .description-container {
+    display: block;
+    margin-left: 20px;
+
+    .description {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.plp-paginator {
+  margin: auto;
+  width: 100%;
+  text-align: center;
+}
