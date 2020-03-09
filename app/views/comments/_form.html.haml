@@ -1,0 +1,9 @@
+.new-comment-container
+  .comment-container
+    .description
+      = form_for(@comment, url: movie_comments_path(@movie.id)) do |f|
+        = f.text_field :description, class: 'new-description'
+        = f.hidden_field :movie_id, value: @movie.id
+        = f.hidden_field :user_id, value: current_user.id
+        .buttons-container
+          = f.submit 'Create comment', class: 'button-center'

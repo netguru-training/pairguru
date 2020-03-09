@@ -1,0 +1,16 @@
+.jumbotron
+  %p.text-center Best Commenters
+  %table.table
+    %thead.thead-dark
+      %tr
+        %th #
+        %th User name:
+        %th User email:
+        %th Comments count:
+    %tbody
+      - @top_commenters.each_with_index do |user, i|
+        %tr
+          %th= i + 1
+          %td= user.name
+          %td= user.email
+          %td= user.comments_count
