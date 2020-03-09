@@ -1,5 +1,17 @@
 %h1= @movie.title
 .jumbotron
-  = @movie.description
-- if user_signed_in?
-  %p= link_to 'Email me details about this movie', send_info_movie_path(@movie), class: 'btn btn-sm btn-default'
+  .pdp
+    %img.img-rounded.img-plp{ src: @movie.avatar }
+
+    .description-container
+      .description
+        = @movie.description
+      %span= I18n.t('rating') + ': ' + @movie.rating.to_s
+      - if user_signed_in?
+        .btn-margin-top
+          = link_to 'Email me details about this movie', send_info_movie_path(@movie.id), class: 'btn btn-sm btn-default'
+
+- if comments_present?(@comments)
+  - if user_signed_in? && user_has_no_comments?(@comments)
+    = render partial: '/comments/form', locals: { comment: @comment, movie_id: @movie.id }
+  = render partial: 'comments/comments_table', locals: { comments: @comments, movie_id: @movie.id }

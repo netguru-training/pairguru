@@ -4,12 +4,17 @@
       %tr
         %td= i + 1
         %td
-          %img.img-rounded{ src: movie.cover }
+          %img.img-rounded.img-plp{ src: avatar_or_cover(movie) }
         %td
           %h4
-            = link_to movie.title, movie_path(movie)
+            = link_to movie.title, movie_path(movie.id)
           %p
             %strong
-              = link_to movie.genre.name, movies_genre_path(movie.genre)
+              - unless is_model_instance?(movie, Movie)
+                = link_to movie.genre_name, movies_genre_path(movie.genre_id)
+              - else
+                = link_to movie.genre.name, movies_genre_path(movie.genre_id)
             = ' (' + movie.released_at.to_s + ')'
           %p= movie.description
+          - unless is_model_instance?(movie, Movie)
+            %p= I18n.t('rating') + ': ' + movie.rating.to_s
