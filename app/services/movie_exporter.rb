@@ -1,6 +1,10 @@
 require "csv"
 
 class MovieExporter
+  def self.call(user, file_path)
+    new.call(user, file_path)
+  end
+
   def call(user, file_path)
     CSV.open(file_path, "wb", csv_options) do |csv|
       Movie.all.each do |movie|
