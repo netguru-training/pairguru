@@ -30,4 +30,19 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  hello: Hello world
+  rating: Rating
+  api:
+    resource_not_found: Resource Not Found
+  comment:
+    cant_be_deleted: Comment couldn't be deleted.
+    cant_be_empty: Comment can't be empty.
+    not_found: Comment not found.
+    succesfully_created: Comment was created.
+    succesfully_updated: Comment was updated.
+    was_deleted: Comment was deleted.
+  movie:
+    not_found: Movie not found
+    sent_movie_info: Email sent with movie info
+  movies:
+    exported: Movies exported
