@@ -1,0 +1,17 @@
+%table.table.table-striped
+  %caption Comments
+  %thead
+    %tr
+      %td created_at
+      %td email
+      %td comment
+      %td
+  %tbody
+    - @movie.comments.order(id: :desc).each_with_index do |comment, i|
+      - if comment.id  #prevent to show empty comment from build (when comment for current_user doesn't exists)
+        %tr
+          %td= comment.created_at.strftime("%Y-%m-%d %H:%M:%S")
+          %td= comment.user.email
+          %td= comment.body
+          %td= link_to 'delete', [@movie, comment], :method => :delete, data: {confirm: "Are you sure?"} if current_user == comment.user
+        

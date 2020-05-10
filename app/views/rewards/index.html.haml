@@ -1,0 +1,14 @@
+- if @rewards
+  %table.table.table-striped
+    %thead
+      %tr
+        %td #
+        %td email
+        %td comments count
+        %td
+    %tbody
+      - @rewards.each_with_index do |reward, i|
+        %tr
+          %td= i + 1
+          %td= reward[:email]
+          %td= reward[:count]

@@ -1,0 +1,5 @@
+= form_for [@movie, @comment], method: :post do |f|
+  = f.label 'Comment'
+  %div.fields
+    = f.text_area :body, class: 'form-control'
+  = f.submit "Add comment"
