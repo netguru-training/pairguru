@@ -1,0 +1,3 @@
+%h1 TOP 10 commentators for last 7 %days!
+- @commentators.each_with_index do |commentator, index|
+    %h4 #{index+1}. #{ User.find_by(id: commentator.id).name } - #{ User.find_by(id: commentator.id).comments.count } 
