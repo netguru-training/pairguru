@@ -14,4 +14,10 @@
 
 class Movie < ApplicationRecord
   belongs_to :genre
+  has_many :comments
+
+  def commented(user_id)
+    comments.find_by(user_id: user_id) != nil
+  end
+
 end

@@ -1,5 +1,21 @@
 %h1= @movie.title
 .jumbotron
   = @movie.description
+  %br/
+  %br/
+  %h5 Comment section:
+  - if current_user && @movie.commented(current_user.id) == false
+    = form_for @new_comment do |f|
+      = f.text_field :content, placeholder: "#{User.find_by(id: current_user.id).email}"
+      = f.hidden_field :user_id, value: current_user.id
+      = f.hidden_field :movie_id, value: @movie.id
+      = f.submit "+"
+  - @comments.each do |comment|
+    %h5 
+      #{ comment.user.name } ~ #{ comment.content }
+      - if current_user && current_user == comment.user
+        = link_to 'x', comment, method: :delete, title: 'Delete your comment', class: 'btn btn-danger btn-delete'
+
+
 - if user_signed_in?
   %p= link_to 'Email me details about this movie', send_info_movie_path(@movie), class: 'btn btn-sm btn-default'

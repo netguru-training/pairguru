@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
+  resources :comments, only: [:create, :destroy]
   devise_for :users
+  get 'commentators', to: 'comments#commentators'
 
   root "home#welcome"
   resources :genres, only: :index do
