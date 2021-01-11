@@ -1,0 +1,10 @@
+%table.table.table-striped
+  %tbody
+    - @comments.each do |comment|
+      %tr
+        %td
+          %h4= comment.author
+          %p= comment.content
+          - if comment.accessible_to(current_user)
+            = link_to "delete comment", movie_comment_path(@movie, comment), class: "btn btn-sm btn-primary",
+              method: :delete, data: { confirm: "Are you sure?" }

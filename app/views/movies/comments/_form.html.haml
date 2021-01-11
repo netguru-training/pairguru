@@ -1,0 +1,5 @@
+.row
+  .col-md-8.col-lg-8
+    = simple_form_for :comment, url: movie_comments_path(@movie) do |f|
+      = f.input :content
+      = f.button :submit
