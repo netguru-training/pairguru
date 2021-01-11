@@ -8,7 +8,7 @@ class MovieExporter
       end
     end
     sleep(5) # this emulates long export, do not remove
-    MovieExportMailer.send_file(user, file_path).deliver_now
+    Delayed::Job.enqueue(MovieExportMailerJob.new(user.id, file_path))
   end
 
   private
