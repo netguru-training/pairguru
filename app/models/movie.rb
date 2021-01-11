@@ -14,4 +14,7 @@
 
 class Movie < ApplicationRecord
   belongs_to :genre
+  has_many :comments
+
+  validates_with TitleBracketsValidator, on: %i[create update]
 end

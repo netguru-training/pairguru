@@ -1,5 +1,16 @@
-%h1= @movie.title
-.jumbotron
-  = @movie.description
+.row
+  .col-md-12.col-lg-12
+    %h1
+      = @movie.title
+      = @movie.rating
+.row
+  .col-md-2.col-lg-2
+    %img.img-rounded{ src: @movie.poster }
+  .col-md-10.col-lg-10
+    %p= @movie.description
+    %p= @movie.plot
 - if user_signed_in?
-  %p= link_to 'Email me details about this movie', send_info_movie_path(@movie), class: 'btn btn-sm btn-default'
+  %p= link_to 'Email me details about this movies', send_info_movie_path(@movie), class: 'btn btn-sm btn-default'
+  - unless @movie.is_commented_by?(current_user)
+    = render 'movies/comments/form', movie: @movie
+  = render 'movies/comments/comments_table', comments: @comments

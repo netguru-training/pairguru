@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   devise_for :users
 
   root "home#welcome"
@@ -7,7 +8,9 @@ Rails.application.routes.draw do
       get "movies"
     end
   end
+  resources :commenters, only: :index
   resources :movies, only: [:index, :show] do
+    resources :comments, only: [:create, :destroy]
     member do
       get :send_info
     end
@@ -15,4 +18,7 @@ Rails.application.routes.draw do
       get :export
     end
   end
+
+  mount Movies::API => '/'
+
 end

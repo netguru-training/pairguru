@@ -6,13 +6,14 @@ class MoviesController < ApplicationController
   end
 
   def show
-    @movie = Movie.find(params[:id])
+    @movie = Movie.find(params[:id]).decorate
+    @comments = @movie.comments.ordered.decorate
   end
 
   def send_info
     @movie = Movie.find(params[:id])
-    MovieInfoMailer.send_info(current_user, @movie).deliver_now
-    redirect_back(fallback_location: root_path, notice: "Email sent with movie info")
+    Delayed::Job.enqueue(MovieInfoMailerJob.new(current_user.id, @movie.id))
+    redirect_back(fallback_location: root_path, notice: "Email sent with movies info")
   end
 
   def export
