@@ -15,5 +15,14 @@ module Pairguru
     # Application configuration can go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
+
+    config.active_job.queue_adapter = :delayed_job
+
+    config.autoload_paths += %W[
+      #{config.root}/app/jobs
+      #{config.root}/app/models/validators
+      #{config.root}/app/api
+      #{config.root}/app/serializers
+    ]
   end
 end
